@@ -4,11 +4,11 @@ import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-with open('StreamingHistory0.json', encoding='utf8') as json_file:
+with open('../library/StreamingHistory0.json', encoding='utf8') as json_file:
     stream_history_0 = json.load(json_file)
-with open('StreamingHistory1.json', encoding='utf8') as json_file:
+with open('../library/StreamingHistory1.json', encoding='utf8') as json_file:
     stream_history_1 = json.load(json_file)
-with open('StreamingHistory2.json', encoding='utf8') as json_file:
+with open('../library/StreamingHistory2.json', encoding='utf8') as json_file:
     stream_history_2 = json.load(json_file)
 
 df0 = pd.DataFrame.from_dict(stream_history_0)

@@ -3,11 +3,11 @@ import pandas as pd
 
 
 
-with open('StreamingHistory0.json', encoding='utf8') as json_file:
+with open('../library/StreamingHistory0.json', encoding='utf8') as json_file:
     stream_history_0 = json.load(json_file)
-with open('StreamingHistory1.json', encoding='utf8') as json_file:
+with open('../library/StreamingHistory1.json', encoding='utf8') as json_file:
     stream_history_1 = json.load(json_file)
-with open('StreamingHistory2.json', encoding='utf8') as json_file:
+with open('../library/StreamingHistory2.json', encoding='utf8') as json_file:
     stream_history_2 = json.load(json_file)
 
 df0 = pd.DataFrame.from_dict(stream_history_0)
@@ -17,7 +17,7 @@ df2 = pd.DataFrame.from_dict(stream_history_2)
 df_sh = pd.concat([df0,df1,df2],ignore_index=True)
 df_2019 = df_sh[df_sh.endTime > '2019-01-01'].reset_index(drop=True)
 
-with open('YourLibrary.json', encoding='utf8') as json_file:
+with open('../library/YourLibrary.json', encoding='utf8') as json_file:
     library = json.load(json_file)
 
 df_lib = pd.DataFrame.from_dict(library)
